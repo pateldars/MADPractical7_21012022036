@@ -36,25 +36,8 @@ class MainActivity : AppCompatActivity() {
         tpd.show()
 
     }
-    private fun sendDialogDataToActivity(hour: Int, minute: Int) {
-        val alarmCalendar = Calendar.getInstance()
-        val year: Int = alarmCalendar.get(Calendar.YEAR)
-        val month: Int = alarmCalendar.get(Calendar.MONTH)
-        val day: Int = alarmCalendar.get(Calendar.DATE)
-        alarmCalendar.set(year, month, day, hour, minute, 0)
-        
-        textAlarmTime.text = SimpleDateFormat("hh:mm ss a").format(alarmCalendar.time)
-        setAlarm(alarmCalendar.timeInMillis, "Start")
-        Toast.makeText(
-            this,
-            "Time: hours:${hour}, minutes:${minute},
-                    millis:${alarmCalendar.timeInMillis}",
-        Toast.LENGTH_SHORT
-        ).show()
-    }
 
-    private fun setAlarm(timeInMillis: Long, s: String) {
 
-    }
+   
 
 }
